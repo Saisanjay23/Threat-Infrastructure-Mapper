@@ -1,5 +1,16 @@
 # Threat Infrastructure Mapper (TIM)
 
+<p align="left">
+  <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.11+">
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/React_Flow-Graph-FF0072?style=flat-square" alt="React Flow">
+  <img src="https://img.shields.io/badge/NetworkX-Engine-00599C?style=flat-square" alt="NetworkX">
+  <img src="https://img.shields.io/badge/MongoDB-GridFS-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB">
+  <img src="https://img.shields.io/badge/Tests-148_passed-brightgreen?style=flat-square" alt="Tests 148 Passed">
+  <img src="https://img.shields.io/badge/Coverage-89%25-success?style=flat-square" alt="Coverage 89%">
+  <img src="https://img.shields.io/badge/Architecture-Async_Pipeline-blueviolet?style=flat-square" alt="Async Pipeline">
+</p>
+
 Local-first threat intelligence and infrastructure mapping for threat intelligence, digital risk protection, brand protection, and external attack surface teams.
 
 > TIM does not ask *"Is this domain malicious?"* It asks *"What infrastructure belongs to the same operation?"*
