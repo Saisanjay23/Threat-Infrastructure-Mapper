@@ -23,6 +23,28 @@ Give TIM one IOC: a domain, URL, IP, or certificate hash, or an uploaded logo, s
 
 Everything runs on one Windows 11 machine with Python, Node.js, and MongoDB. **No Docker.**
 
+## Preview
+
+### 🌐 Interactive Investigation Graph Explorer
+![Graph Explorer](docs/screenshots/graph_explorer.png)
+
+<details open>
+<summary><b>📸 Additional Interface Previews</b></summary>
+
+#### Executive Dashboard & Telemetry
+![Executive Dashboard](docs/screenshots/dashboard.png)
+
+#### Threat Cluster Analysis & Evidence Breakdown
+![Threat Clusters](docs/screenshots/clusters.png)
+
+#### Investigation Detail & Artifact Timeline
+![Investigation Detail](docs/screenshots/investigation_detail.png)
+
+#### Intelligence Providers & Credit Accounting
+![Intelligence Providers](docs/screenshots/providers.png)
+
+</details>
+
 ## Quick start
 
 ```bash
