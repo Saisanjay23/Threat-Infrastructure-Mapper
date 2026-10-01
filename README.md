@@ -26,24 +26,29 @@ Everything runs on one Windows 11 machine with Python, Node.js, and MongoDB. **N
 ## Preview
 
 ### 🌐 Interactive Investigation Graph Explorer
-![Graph Explorer](docs/screenshots/graph_explorer.png)
+<p align="center">
+  <img src="./docs/screenshots/graph_explorer.png" alt="Interactive Graph Explorer" width="100%">
+</p>
 
-<details open>
-<summary><b>📸 Additional Interface Previews</b></summary>
+### 📊 Executive Dashboard & Telemetry
+<p align="center">
+  <img src="./docs/screenshots/dashboard.png" alt="Executive Dashboard" width="100%">
+</p>
 
-#### Executive Dashboard & Telemetry
-![Executive Dashboard](docs/screenshots/dashboard.png)
+### 🎯 Threat Cluster Analysis & Evidence Breakdown
+<p align="center">
+  <img src="./docs/screenshots/clusters.png" alt="Threat Clusters" width="100%">
+</p>
 
-#### Threat Cluster Analysis & Evidence Breakdown
-![Threat Clusters](docs/screenshots/clusters.png)
+### 🔎 Investigation Detail & Timeline
+<p align="center">
+  <img src="./docs/screenshots/investigation_detail.png" alt="Investigation Detail" width="100%">
+</p>
 
-#### Investigation Detail & Artifact Timeline
-![Investigation Detail](docs/screenshots/investigation_detail.png)
-
-#### Intelligence Providers & Credit Accounting
-![Intelligence Providers](docs/screenshots/providers.png)
-
-</details>
+### 🔌 Intelligence Providers & Health Accounting
+<p align="center">
+  <img src="./docs/screenshots/providers.png" alt="Intelligence Providers" width="100%">
+</p>
 
 ## Quick start
 
