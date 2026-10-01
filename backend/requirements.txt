@@ -1,0 +1,35 @@
+# --- Web / API ---
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.32
+pydantic>=2.9,<3
+pydantic-settings>=2.6
+python-multipart>=0.0.12
+email-validator>=2.2
+
+# --- Storage ---
+motor>=3.6,<4
+pymongo>=4.9,<5
+
+# --- Security ---
+PyJWT>=2.9
+bcrypt>=4.2
+cryptography>=43
+
+# --- Collection / networking ---
+aiohttp>=3.10
+curl_cffi>=0.7
+dnspython>=2.7
+playwright>=1.48
+playwright-stealth>=2.0
+tldextract>=5.1
+
+# --- Parsing / fingerprinting ---
+beautifulsoup4>=4.12
+lxml>=5.3
+Pillow>=11.0
+ImageHash>=4.3
+mmh3>=5.0
+
+# --- Graph / reporting ---
+networkx>=3.4
+reportlab>=4.2

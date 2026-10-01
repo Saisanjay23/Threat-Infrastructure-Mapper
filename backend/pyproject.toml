@@ -1,0 +1,66 @@
+[project]
+name = "tim-backend"
+version = "1.0.0"
+description = "Threat Infrastructure Mapper - FastAPI backend"
+requires-python = ">=3.13"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"
+addopts = "-ra --strict-markers"
+markers = [
+    "network: test requires internet access (deselect with -m 'not network')",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning:motor.*",
+    "ignore:Unverified HTTPS request",
+]
+
+[tool.coverage.run]
+source = ["app"]
+branch = true
+omit = ["app/collectors/browser.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+exclude_lines = ["pragma: no cover", "if TYPE_CHECKING:", "raise NotImplementedError"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "ASYNC", "RUF"]
+ignore = [
+    "S101",   # assert used for invariants
+    "S311",   # random for seed data only
+    "B008",   # FastAPI Depends() in defaults
+    "RUF012", # ClassVar annotations on provider metadata
+    "S105",   # default admin password lives in config with warning
+    "ASYNC109",
+    "ASYNC110",
+    "RUF001",
+    "RUF002",
+    "RUF003",
+    "E501",   # line length is managed by `ruff format`; long literals/regexes are intentional
+    "RUF046", # explicit int(round()) kept for readability
+    "UP046",  # Generic[T] base kept for Pydantic compatibility
+    "RUF059", # unused unpacked names document tuple shapes
+    "RUF015",
+    "S110",   # best-effort cleanup paths deliberately swallow errors
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S", "B011"]
+"scripts/**" = ["S"]
+
+[tool.mypy]
+python_version = "3.13"
+ignore_missing_imports = true
+warn_unused_ignores = false
+check_untyped_defs = true
+no_implicit_optional = true
+exclude = ["tests/", ".venv/"]

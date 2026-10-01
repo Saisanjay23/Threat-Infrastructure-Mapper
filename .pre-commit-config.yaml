@@ -1,0 +1,51 @@
+# Install once (inside a git checkout):
+#   backend\.venv\Scripts\pre-commit install
+# Run on everything:
+#   backend\.venv\Scripts\pre-commit run --all-files
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: \.bat$
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+        exclude: ^frontend/tsconfig.*\.json$
+      - id: check-merge-conflict
+      - id: detect-private-key
+      - id: check-added-large-files
+        args: ["--maxkb=1024"]
+
+  - repo: local
+    hooks:
+      - id: ruff-lint
+        name: ruff lint (backend)
+        entry: backend/.venv/Scripts/python.exe -m ruff check --fix
+        language: system
+        types: [python]
+        files: ^backend/
+      - id: ruff-format
+        name: ruff format (backend)
+        entry: backend/.venv/Scripts/python.exe -m ruff format
+        language: system
+        types: [python]
+        files: ^backend/
+      - id: mypy
+        name: mypy (backend)
+        entry: cmd /c "cd backend && .venv\Scripts\python.exe -m mypy app"
+        language: system
+        pass_filenames: false
+        files: ^backend/app/
+      - id: eslint
+        name: eslint (frontend)
+        entry: cmd /c "cd frontend && npx eslint . --max-warnings 50"
+        language: system
+        pass_filenames: false
+        files: ^frontend/src/
+      - id: tsc
+        name: typescript (frontend)
+        entry: cmd /c "cd frontend && npx tsc -b --noEmit"
+        language: system
+        pass_filenames: false
+        files: ^frontend/src/

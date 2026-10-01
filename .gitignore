@@ -1,0 +1,37 @@
+# Python
+backend/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Secrets
+backend/.env
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/coverage/
+frontend/playwright-report/
+frontend/test-results/
+frontend/node_modules/.tmp/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.claude/
+
+# Deployment & Build caches
+.vercel/
+frontend/.vercel/
+
+# Large binaries
+*.exe
+scripts/cloudflared.exe
+cloudflared
+
